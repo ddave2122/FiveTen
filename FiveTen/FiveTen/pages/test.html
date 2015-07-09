@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang='en'>
+    <meta charset='UTF-8'>
+    <title></title>
+</head>
+<script>
+    function getData() {
+        var url = 'http://localhost:8080/test';
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open('GET', url, false);
+        xmlHttp.send(null);
+        document.getElementById('fillResponse').innerHTML = xmlHttp.responseText;
+    }
+
+</script>
+<body>
+    <div id='fillResponse'>Text to replace</div>
+    <input type='text' id='input1' name='input1' />
+    <button type='submit' onclick='getData()'>Click Me!</button>
+
+</body>
+</html>
